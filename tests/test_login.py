@@ -24,7 +24,7 @@ class Testlogin(Basetest):
 
         txt = lp.verify_pg_title()
 
-        assert txt == 'OrangeHRM123'
+        assert txt == 'OrangeHRM'
 
         # print(lp.verify_pg_title())
         # text_title = lp.verify_pg_title()
