@@ -25,18 +25,18 @@ class Testlogin(Basetest):
         txt = lp.verify_pg_title()
 
         assert txt == 'OrangeHRM'
-
-        # print(lp.verify_pg_title())
-        # text_title = lp.verify_pg_title()
-        # assert text_title == Common().title
-        #
-        # txt = hp.verify_dash()
-        #
-        # if txt == Common().dash:
-        #     assert True
-        #
-        # else:
-        #     assert False
+        hp = lp.perform_click()
+        print(lp.verify_pg_title())
+        text_title = lp.verify_pg_title()
+        assert text_title == Common().title
+        
+        txt = hp.verify_dash()
+        
+        if txt == Common().dash:
+            assert True
+        
+        else:
+            assert False
 
 
 @pytest.fixture(params=Common().return_excelvals())
